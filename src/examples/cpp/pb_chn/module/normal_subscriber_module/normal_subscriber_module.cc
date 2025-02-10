@@ -47,6 +47,7 @@ void NormalSubscriberModule::EventHandle(
     aimrt::channel::ContextRef ctx,
     const std::shared_ptr<const aimrt::protocols::example::ExampleEventMsg>& data) {
   AIMRT_INFO("Receive new pb event, ctx: {}, data: {}", ctx.ToString(), aimrt::Pb2CompactJson(*data));
+
 }
 
 }  // namespace aimrt::examples::cpp::pb_chn::normal_subscriber_module
