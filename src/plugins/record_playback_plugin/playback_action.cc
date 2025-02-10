@@ -451,6 +451,7 @@ void PlaybackAction::AddPlaybackTasks(const std::shared_ptr<void>& task_counter_
         break;
       }
     } else {
+      int i = 0;
       if (!OpenNewDb()) {
         std::lock_guard<std::mutex> lck(playback_state_mutex_);
         playback_state_ = PlayBackState::kGetStopSignal;
